@@ -85,6 +85,14 @@ app.controller('PhoneController', function ($scope, $rootScope, $http, $timeout,
     }); 
 
   };
+  
+   $scope.mute = function (reservation) {
+
+    $timeout(function(){
+      Twilio.Device.mute();
+    }); 
+
+  };
 
   $scope.call = function (phoneNumber) {
 
